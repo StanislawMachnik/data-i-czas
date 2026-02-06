@@ -59,7 +59,14 @@ public class MainActivity extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        DatePickerDialog datePickerDialog = new DatePickerDialog();
+                        DatePickerDialog datePickerDialog = new DatePickerDialog(
+                                new DatePickerDialog.OnDateSetListener(){
+                                    @Override
+                                    public void onDateSet(DatePicker, data_picker, int i, int i1, int i2){
+                                        Toast //... i1, i2, i
+                                    }
+                                }
+                        );
                     }
                 }
         );
